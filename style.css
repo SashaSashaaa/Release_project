@@ -2,6 +2,10 @@
     cursor: url('Cursor.png'),pointer;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: rgb(255, 251, 202);
     margin-left: 0;
@@ -11,7 +15,9 @@ body{
 }
 
     
+
 /* ХІДЕР */
+
 
 
 header{
@@ -88,7 +94,6 @@ nav ul{
 }
 
 .menu-hidden{
-    /* display: none; */
     height: 0;
     width: 0;
     overflow: hidden;
@@ -110,12 +115,10 @@ nav ul{
 }
 
 .menu-hidden>li:hover a{
-    /* color: rgb(231, 222, 60); */
     color: black;
 }
 
 .menu-li:hover .menu-hidden{
-    /* display: block; */
     width: 110px;
     height: 80px;
 }
@@ -127,52 +130,48 @@ nav ul{
 
 
 h1{
-    margin-left: 88px;
-    margin-top: 102px;
+    text-align: center;
+    margin: 10px;
 }
 
-.background-pizzeria{
-    position: absolute;
-    top: 170px;
-    width: 100%;
-    border-top: 3px solid rgb(223, 219, 178);
-    margin-bottom: 50px;
-    z-index: -1;
+h2, h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    /* Cambria, Cochin, Georgia, Times, 'Times New Roman', serif */
+    color: rgb(255, 94, 0);
+    text-decoration: underline;
+}
+
+.main-start{
+    background-image: url("pizzeria_photo.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 40px 5px;
+    font-size: 24px;
 }
 
 .pizzeria{
-    position: relative;
-    background-color: rgba(199, 194, 193, 0.452);
-    width: 600px;
-    height: 260px;
-    right: -260px;
+    background-color: rgba(117, 117, 117, 0.701);
     border-radius: 20px;
-    
+    padding: 10px;
+    padding-bottom: 30px;
 }
 
 .verh-site{
-    margin-left: 88px;
-    margin-top: 49px;
-    width: 502px;
+    max-width: 500px;
     font-size: 24px;
 }
 
 .map{
     border-radius: 20px;
-    margin-top: 68px;
     width: 350px;
     height: 350px;
-    position: absolute;
-    left: 1000px;
-    top: 168px;
     opacity: 0.8;
-}
-
-button{
-    margin-left: 74px;
-    width: 221px;
-    height: 55px;   
-    font-size: 20px;
 }
 
 .bi{
@@ -186,44 +185,62 @@ span a{
     text-decoration: none;
 }
 
-.first-button:first-child{
+.buttons{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.first-button{
     border-right: 2px solid black;
     border-bottom: 2px solid black;
     border-left: 2px solid rgb(82, 82, 82);
     border-top: 2px solid rgb(82, 82, 82);
-    padding: 10px 70px 10px 70px;
-    margin-left: 85px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
     background-image: linear-gradient(95deg, green, rgb(11, 224, 11));
     box-shadow: 10px 10px 10px rgba(179, 179, 179, 0.774);
 }
 
-.first-button:first-child:hover{
+.buttons span:hover{
+    transform: scale(1.1);
     transition: 0.1s ease-in;
-    padding: 15px 75px 15px 75px;
 }
 
-.last-button:last-child{
+.last-button{
     border-right: 2px solid black;
     border-bottom: 2px solid black;
     border-left: 2px solid rgb(82, 82, 82);
     border-top: 2px solid rgb(82, 82, 82);
-    padding: 10px 80px 10px 80px;
-    margin-left: 20px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
     background-image: linear-gradient(95deg, rgb(255, 98, 0), rgb(255, 247, 0));
     box-shadow: 10px 10px 10px rgba(179, 179, 179, 0.774);
 }
 
-.last-button:last-child:hover{
-    transition: 0.1s ease-in;
-    padding: 15px 85px 15px 85px;
-}
 
 .h2-menu{
     text-align: center;
-    margin-top: 280px;
+    margin-top: 30px;
 }
 
-.menu_products{
+.articles-pizzas{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 10px auto;
+    width: 1200px;
+}
+
+.articles-pizzas>*{
+    width: 800px;
+}
+
+main h3{
     text-align: center;
 }
 
@@ -247,10 +264,6 @@ article img{
     margin-right: 20px;
 }
 
-.products-drinks{
-    margin-top: 700px;
-}
-
 .products article{
     margin-left: 10px;
     box-shadow: 10px 10px 10px rgba(179, 179, 179, 0.774);
@@ -258,7 +271,6 @@ article img{
     border-radius: 30px;
     padding-bottom: 20px;
     margin-top: 70px;
-    width: 1400px;
     display: flex;
     background-repeat: no-repeat;
     background-color: rgb(255, 249, 162);
@@ -266,12 +278,7 @@ article img{
 }
 
 .article-child{
-    position: relative;
-    float: right;
-    top: -20px;
-    margin-bottom: 30px;
-    margin-right: 40px;
-    border-radius: 30px;
+    align-self:flex-end;
 }
 
 .products-drinks article{
@@ -281,7 +288,7 @@ article img{
     border-radius: 30px;
     padding-bottom: 20px;
     margin-top: 70px;
-    width: 1400px;
+    width: 800px;
     display: flex;
     background-repeat: no-repeat;
     background-color: rgb(255, 249, 162);
@@ -307,46 +314,42 @@ article img{
 
 h2{
     text-align: center;
-    margin-bottom: 130px;
+    margin-bottom: 30px;
 }
 
-aside{
-    width: 190px;
-    height: 190px;
+
+aside>*{
+    width: 140px;
+    height: 140px;
     border: 3px solid black;
-    border-radius: 100px;
-    padding-left: 5px;
-    padding-top: 10px;
+    border-radius: 50%;
+    padding: 36px;
     margin: 0 40px;
+    margin-top: 50px;
+    text-align: center;
     background: linear-gradient(70deg, rgb(208, 216, 122), rgb(156, 169, 92), rgb(220, 228, 129), rgb(156, 169, 92));
     box-shadow: 10px 10px 10px rgba(179, 179, 179, 0.774);
 }
 
-aside:hover{
+aside p:hover{
     transition: 0.5s;
     transform: rotate(360deg) scale(1.3);
 }
 
-.asides{
+aside{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-}
-
-aside p{
-    margin-top: 50px;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
 #about-us{
-    margin-top: 130px;
+    margin-top: 80px;
 }
 
 #about-us p{
     box-shadow: 10px 10px 10px rgba(179, 179, 179, 0.774);
     height: 170px;
-    width: 900px;
     background: url(Backgrounds/Untitled2.png);
     padding: 90px 196px;
     margin-left: 20px;
@@ -395,10 +398,6 @@ footer img{
     margin-left: 10px;
 }
 
-.inst{
-    width: 85px;
-}
-
 .logo-footer{
     position: relative;
     width: 200px;
@@ -420,6 +419,11 @@ footer img{
     left: -80px;
 }
 
+.bi-airplane:hover{
+    top: -210px;
+    transition: all .5s;
+}
+
 .start{
    width: 20px; 
 }
@@ -439,6 +443,24 @@ footer img{
 
 
 
+@media (max-width: 1260px) {
+    .articles-pizzas{
+        text-align: center;
+        justify-content: center;
+        margin: 10px auto;
+        width: calc(100vw - 20px);
+    }
+
+    .article-child{
+        align-self:center;
+    }
+
+    .articles-pizzas>*{
+        width: 90%;
+        align-self:center;
+    }
+}
+
 @media (max-width: 960px) {
     .logo, .wrapper nav{
         position: static;
@@ -452,242 +474,29 @@ footer img{
         display: flex;
         flex-direction: column;
     }
-}
 
-@media (max-width: 1050px) {
-    .map{
-        left: 900px;
-        width: 300px;
-        height: 300px;
+    .articles-pizzas>*{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
     }
 
-    .verh-site, .first-button, .last-button{
-        margin-left: 88px;
-        width: 270px;
-        font-size: 15px;
-        margin-left: 40px;
+    .products-drinks article {
+        width: 90%;
+        background-repeat: repeat-y;
     }
 
-    .pizzeria{ 
-        width: 550px;
-        height: 199px;
-        position: relative;
-        left: 150px;
-    }
-
-    .pizzeria_title{
-        font-size: 30px;
-        margin-left: 35px;
-    }
-
-    .buttons{
-        margin-left: -45px;
-    }
-}
-
-@media (max-width: 1490px) {
-    .products article, article-child{
-        width: 1300px;
-    }
-
-    .logo-footer {
-        width: 190px;
-        height: 190px;
-        left: 685px;
-    }
-
-    .map{
-        left: 870px;
-        width: 300px;
-        height: 300px;
-    }
-
-    .pizzeria{
-        left: 90px;
-    }
-}
-
-@media (max-width: 1390px) {
-    .products article, article-child{
-        width: 1200px;
-    }
-
-    .article-child img{
-        float: left;
-        width: 363px;
-        height: 355px;
-    }
-
-    .logo-footer {
-        width: 190px;
-        height: 190px;
-        left: 635px;
-    }
-
-    .map{
-        opacity: 0;
-    }
-
-    .pizzeria{
-        left: 50px;
-    }
-}
-
-@media (max-width: 1290px) {
     .products article{
-        width: 1100px;
+        background-repeat: repeat-y;
     }
 
-    .article-child{
-        float: left;
+    .products img, .products-drinks img{
+        margin-left: 10px;
     }
 
-    .article-child img{
-        float: left;
-    }
-
-    .logo-footer {
-        width: 190px;
-        height: 190px;
-        left: 575px;
-    }
-}
-
-@media (max-width: 1190px) {
-    .products article, article-child{
-        width: 1000px;
-    }
-
-    .article-child{
-        float: left;
-    }
-
-    .article-child img{
-        float: left;
-        position: relative;
-        bottom: 20px;
-    }
-
-    .logo-footer {
-        width: 190px;
-        height: 190px;
-        left: 535px;
-    }
-}
-
-@media (max-width: 1090px) {
-    .products article, article-child{
-        width: 900px;
-        height: 480px;
-    }
-
-    .article-child{
-        float: left;
-    }
-
-    .article-child img{
-        float: left;
-        position: relative;
-        bottom: 30px;
-    }
-
-    .logo-footer {
-        width: 190px;
-        height: 190px;
-        left: 475px;
-    }
-}
-
-@media (max-width: 990px) {
-    .products article, article-child{
-        width: 800px;
-        height: 460px;
-    }
-
-    .article-child{
-        float: left;
-    }
-
-    .article-child img{
-        float: left;
-        position: relative;
-        bottom: 40px;
-    }
-
-    .logo-footer {
-        width: 190px;
-        height: 190px;
-        left: 435px;
-    }
-}
-
-@media (max-width: 890px) {
-    .products article, article-child{
-        width: 700px;
-        height: 430px;
-    }
-
-    .article-child{
-        float: left;
-    }
-
-    .article-child img{
-        float: left;
-        position: relative;
-        bottom: 45px;
-    }
-
-    .logo-footer {
-        width: 190px;
-        height: 190px;
-        left: 330px;
-    }
-}
-
-@media (max-width: 790px) {
-    .products article, article-child{
-        width: 600px;
-        height: 420px;
-    }
-
-    .article-child{
-        float: left;
-    }
-
-    .article-child img{
-        float: left;
-    }
-
-    .logo-footer {
-        opacity: 0;
-    }
-}
-
-@media (max-width: 690px) {
-    .products article, article-child{
-        width: 500px;
-    }
-
-    .article-child{
-        float: left;
-    }
-
-    .article-child img{
-        float: left;
-    }
-}
-
-@media (max-width: 590px) {
-    .products article, article-child{
-        width: 400px;
-        font-size: 18px;
-    }
-
-    .article-child{
-        float: left;
-    }
-
-    .article-child img{
-        float: left;
+    #about-us p{
+        padding-top: 10px;
+        padding-left: 50px;
     }
 }
